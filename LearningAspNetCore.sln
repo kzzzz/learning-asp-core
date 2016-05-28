@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24606.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{76B36804-E4BB-423E-9101-E00057759BC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{55031E82-F130-4C27-81DB-142BECE95072}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "LearningAspNetCore", "src\LearningAspNetCore\LearningAspNetCore.xproj", "{39BE9863-5D6D-4F95-9B76-AD3C4A17278F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39BE9863-5D6D-4F95-9B76-AD3C4A17278F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39BE9863-5D6D-4F95-9B76-AD3C4A17278F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39BE9863-5D6D-4F95-9B76-AD3C4A17278F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39BE9863-5D6D-4F95-9B76-AD3C4A17278F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{39BE9863-5D6D-4F95-9B76-AD3C4A17278F} = {76B36804-E4BB-423E-9101-E00057759BC1}
+	EndGlobalSection
+EndGlobal
