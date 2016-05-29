@@ -23,6 +23,7 @@ namespace LearningAspNetCore
         // Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
             services.AddSingleton(provider => Configuration);
             services.AddSingleton<IGreeter, Greeter>();
         }
@@ -38,10 +39,15 @@ namespace LearningAspNetCore
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseDefaultFiles();
+            //app.UseDefaultFiles();
 
-            // if the request file found, it will stop go to next middleware
-            app.UseStaticFiles();
+            //// if the request file found, it will stop go to next middleware
+            //app.UseStaticFiles();
+
+            app.UseMvc(b =>
+            {
+                b.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
+            });
 
             app.UseRuntimeInfoPage("/info");
 
