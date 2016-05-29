@@ -29,12 +29,23 @@ namespace LearningAspNetCore
 
         // This method gets called by the runtime. 
         // Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app,
-            IGreeter greeter)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment environment, IGreeter greeter)
         {
             app.UseIISPlatformHandler();
+            //app.UseWelcomePage();
+            if (environment.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
-            app.Run(async (context) =>
+            app.UseDefaultFiles();
+
+            // if the request file found, it will stop go to next middleware
+            app.UseStaticFiles();
+
+            app.UseRuntimeInfoPage("/info");
+
+            app.Run(async context =>
             {
                 var greeting = greeter.GetGreeting();
 
